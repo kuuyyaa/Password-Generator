@@ -104,6 +104,24 @@ var specialCharacters = [
     var includeUppercase = confirm("Include lowercase characters? \nClick OK if yes, click Cancel if no.");
     var includeNumbers = confirm("Include numbers? \nClick OK if yes, click Cancel if no.");
     var includeSymbols = confirm("Include symbols? \nClick OK if yes, click Cancel if no.");
+
+    // Validate that at least one character type is selected
+    while (!includeLowercase && !includeUppercase && !includeNumbers && !includeSymbols) {
+        alert("Select at least one character type.")
+        includeLowercase = confirm("Include lowercase characters? \nClick OK if yes, click Cancel if no.");
+        includeUppercase = confirm("Include uppercase characters? \nClick OK if yes, click Cancel if no.");
+        includeNumbers = confirm("Include numbers? \nClick OK if yes, click Cancel if no.");
+        includeSymbols = confirm("Include symbols? \nClick OK if yes, click Cancel if no.");
+    }
+
+    // Return user prompt selections
+    return {
+        length: passwordLength,
+        hasLowerCase: includeLowercase,
+        hasUpperCase: includeUppercase,
+        hasNumbers: includeNumbers,
+        hasSymbols: includeSymbols
+    };
   }
   
   // Function for getting a random element from an array
