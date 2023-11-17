@@ -134,11 +134,12 @@ var specialCharacters = [
     var options = getPasswordOptions();
     var result = []; 
     var possibleCharacters = [];
+    
     // Create list of all possible characters based on user selection
-    if (options.hasLowerCase){possibleCharacters = possibleCharacters.concat(lowercase);}
-    if (options.hasUpperCase){possibleCharacters = possibleCharacters.concat(uppercase);}
-    if (options.hasNumbers){possibleCharacters = possibleCharacters.concat(numbers);}
-    if (options.hasSymbols){possibleCharacters = possibleCharacters.concat(symbols);}
+    if (options.hasLowerCase){possibleCharacters = possibleCharacters.concat(lowerCasedCharacters);}
+    if (options.hasUpperCase){possibleCharacters = possibleCharacters.concat(upperCasedCharacters);}
+    if (options.hasNumbers){possibleCharacters = possibleCharacters.concat(numericCharacters);}
+    if (options.hasSymbols){possibleCharacters = possibleCharacters.concat(specialCharacters);}
 
     // Generate password
     for (var i=0;i<options.length;i++){
