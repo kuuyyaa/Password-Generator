@@ -91,7 +91,7 @@ var specialCharacters = [
   // Function to prompt user for password options
   function getPasswordOptions() {
     // Prompt for password length
-    var passwordLength = prompt("Enter the length of the password (between 8 and 128 characters)")
+    var passwordLength = prompt("Please enter the length of the password (between 8 and 128 characters):")
 
     // Validate password length
     while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
@@ -134,7 +134,7 @@ var specialCharacters = [
     var options = getPasswordOptions();
     var result = []; 
     var possibleCharacters = [];
-    
+
     // Create list of all possible characters based on user selection
     if (options.hasLowerCase){possibleCharacters = possibleCharacters.concat(lowerCasedCharacters);}
     if (options.hasUpperCase){possibleCharacters = possibleCharacters.concat(upperCasedCharacters);}
