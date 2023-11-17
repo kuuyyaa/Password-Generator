@@ -90,7 +90,16 @@ var specialCharacters = [
   
   // Function to prompt user for password options
   function getPasswordOptions() {
-  
+    // Prompt for password length
+    var passwordLength = prompt("Enter the length of the password (between 8 and 128 characters)")
+
+    // Validate password length
+    while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
+        alert('Invalid input. Please enter a number between 8 and 128');
+        passwordLength = prompt("Please try again");
+    }
+
+    
   }
   
   // Function for getting a random element from an array
