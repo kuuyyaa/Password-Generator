@@ -99,7 +99,11 @@ var specialCharacters = [
         passwordLength = prompt("Please try again");
     }
 
-    
+    // Confirm password criteria
+    var includeLowercase = confirm("Include uppercase characters? \nClick OK if yes, click Cancel if no.");
+    var includeUppercase = confirm("Include lowercase characters? \nClick OK if yes, click Cancel if no.");
+    var includeNumbers = confirm("Include numbers? \nClick OK if yes, click Cancel if no.");
+    var includeSymbols = confirm("Include symbols? \nClick OK if yes, click Cancel if no.");
   }
   
   // Function for getting a random element from an array
