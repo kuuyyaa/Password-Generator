@@ -131,7 +131,17 @@ var specialCharacters = [
   
   // Function to generate password with user input
   function generatePassword() {
-  
+    var options = getPasswordOptions();
+    var result = []; 
+    var possibleCharacters = [];
+    // Add all possible characters based on user selection
+    if (options.hasLowerCase){possibleCharacters = possibleCharacters.concat(lowercase);}
+    if (options.hasUpperCase){possibleCharacters = possibleCharacters.concat(uppercase);}
+    if (options.hasNumbers){possibleCharacters = possibleCharacters.concat(numbers);}
+    if (options.hasSymbols){possibleCharacters = possibleCharacters.concat(symbols);}
+    // Generate password
+    for (var i=0;i<options.length;i++){
+        result.push(getRandom(possibleCharacters));
   }
   
   // Get references to the #generate element
