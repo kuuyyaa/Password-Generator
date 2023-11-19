@@ -164,7 +164,20 @@ var specialCharacters = [
     document.getElementById('copy').removeAttribute('disabled');
   }
 
-  
+  // Function to copy password to clipboard
+  function copyToClipBoard(){
+    var passwordText = document.getElementById('password');
+    passwordText.select();
+    passwordText.setSelectionRange(0, 99999); /* For mobile devices */
+
+    // Copy text to clipboard
+    document.execCommand("Copy");
+    alert("Your password has been copied!");
+
+    // Disable the copy button after copying
+    document.getElementById('copy').setAttribute('disabled', true);
+  }
   
   // Add event listener to generate button
   generateBtn.addEventListener('click', writePassword);
+  document.getElementById('copy').addEventListener('click', copyToClipBoard);

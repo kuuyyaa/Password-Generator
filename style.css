@@ -121,6 +121,10 @@ button[disabled] {
   resize: none;
   overflow: hidden;
 }
+/* copy button */
+#copy {
+    margin-top: 10px;
+  }
 
 @media (max-width: 690px) {
   .btn {
