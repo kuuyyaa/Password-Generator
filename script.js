@@ -159,7 +159,12 @@ var specialCharacters = [
     var passwordText = document.querySelector('#password');
   
     passwordText.value = password;
+
+    // Enable the copy button
+    document.getElementById('copy').removeAttribute('disabled');
   }
+
+  
   
   // Add event listener to generate button
   generateBtn.addEventListener('click', writePassword);
