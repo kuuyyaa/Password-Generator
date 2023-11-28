@@ -1,6 +1,6 @@
 # Password Generator
 
-A simple password generator web application that allows users to customize and generate secure passwords based on preference.
+A simple [password generator](https://kuuyyaa.github.io/Password-Generator/) web application that allows users to customize and generate secure passwords based on preference.
 
 ## Features
 
