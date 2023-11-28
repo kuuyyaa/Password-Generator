@@ -12,7 +12,7 @@ A simple [password generator](https://kuuyyaa.github.io/Password-Generator/) web
 
 1. Open the [Password Generator](https://kuuyyaa.github.io/Password-Generator/) in your web browser.
 2. Click the "Generate Password" button.
-3. Customize password options as needed by entering the required length and selecting wanted character types.
+3. Customize password options as needed by entering the required length and selecting wanted character types via prompts.
 4. Click "Copy Password", which is only enabled after the password is generated to copy to the clipboard.
 
 Example of generated password:
