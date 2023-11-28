@@ -88,6 +88,9 @@ var specialCharacters = [
     'Z'
   ];
   
+  // Disable the 'Copy Password' button prior to generating password
+  document.getElementById('copy').disabled = true;
+  
   // Function to prompt user for password options
   function getPasswordOptions() {
     // Prompt for password length
@@ -174,8 +177,8 @@ var specialCharacters = [
     document.execCommand("Copy");
     alert("Your password has been copied!");
 
-    // Disable the copy button after copying
-    document.getElementById('copy').setAttribute('disabled', true);
+    // Disable the copy button after copying - currently not in use for practicality
+    // document.getElementById('copy').setAttribute('disabled', true);
   }
   
   // Add event listener to generate button
